@@ -214,14 +214,14 @@ Replace the "My Map" text in your `content` div with the following:
 Clear your `map.js` file by deleting the alert and console lines. Add the following leaflet "starter" code:
 
 ```javascript
-var map = L.map('map').setView([34.0697,-118.4432], 17);
+var map = L.map('map').setView([27.68723120070982, 85.32372326123497], 17);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 var marker = L.marker([34.0697,-118.4432]).addTo(map)
-		.bindPopup('The Technology Sandbox<br> Where Yoh is sitting this very moment')
+		.bindPopup('Himalayan College of Geomatics Engineering<br> Y0u are here this very moment')
 		.openPopup();	
 ```
 
