@@ -39,12 +39,6 @@ GitHub pages will allow you to use GitHub as a web server for your html/javascri
 
 - https://git-scm.com/
 
-For MacOS, choose the "homebrew" option (it takes about 10-15 mins to install homebrew)
-
-Once homebrew is installed, Open terminal and enter the following command:
-
-`$ brew install git`
-
 When git is installed, check your installation:
 
 `git --version`
