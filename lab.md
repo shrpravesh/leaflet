@@ -241,16 +241,14 @@ VS Code comes replete with GitHub features. Let's take full advantage of them.
 
 1. Click on the `Source Control` tab, check that you have files that have been added/modified (these will be listed under the `Changes` section), and then
 1. add a message text for your commit, and
-1. commit your changes by clicking on the checkbox icon.
+1. commit your changes by clicking on the Commit icon.
 
 <kbd><img src="images/vs_commit.png"></kbd>
 
-There is one step left. You have just committed your changes to your _local_ repo. You need to **push** your changes to your _online_ GitHub repo. 
+There is one step left. If you clicked jus the commit button you have just committed your changes to your _local_ repo. You need to click **commit & push** button from the dropdown button to make your changes to your _online_ GitHub repo. 
 
-1. Click on the "more actions" button (triple dot)
-1. Click on `Push`
-
-<kbd><img src="images/vs_push.png"></kbd>
+1. Click on the "dropdown" button (down arrow)
+1. Click on `Commit & Push`
 
 ## View your website
 
