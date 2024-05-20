@@ -28,11 +28,11 @@ GitHub pages will allow you to use GitHub as a web server for your html/javascri
 2. In the left menu panel, select **Pages**
 1. Choose the `main` branch and save
 
-	<kbd><img src="images/pages.png"></kbd>
+	<kbd><img src="images/Pages.png"></kbd>
 
 1. Take a note of your new "Pages" url:
 
-	<kbd><img src="images/pagesurl.png"></kbd>
+	<kbd><img src="images/Pagesurl.png"></kbd>
 
 
 ## Install Git
