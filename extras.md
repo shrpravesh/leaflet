@@ -77,7 +77,10 @@ googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
 layerControl.addBaseLayer(googleTerrain, 'Terrain');
 ```
 
+
+
 Geojson file in Leaflet
+
 Lets add District of Nepal in your current workspace, that reads from a GeoJSON file using JQuery.
 
 <img src="images/jquery.png">
