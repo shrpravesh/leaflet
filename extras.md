@@ -41,10 +41,38 @@ var layerControl = L.control.layers(baseLayers).addTo(map);
 
 Add google satellite image on the above.
 
-```javascript
+Satellite:
 
+```javascript
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
         subdomains:['mt0','mt1','mt2','mt3']
 
 layerControl.addBaseLayer(googleSat, 'Satellite Image');
+```
+
+Hybrid
+```javascript
+var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+layerControl.addBaseLayer(googleHybrid, 'Hybrid');
+```
+
+streets
+```javascript
+var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+layerControl.addBaseLayer(googleStreets, 'streets');
+```
+
+Terrain
+```javascript
+googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+layerControl.addBaseLayer(googleTerrain, 'Terrain');
 ```
