@@ -38,3 +38,13 @@ var baseLayers = {
 
 var layerControl = L.control.layers(baseLayers).addTo(map);
 ```
+
+Add google satellite image on the above.
+
+```javascript
+
+var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+        subdomains:['mt0','mt1','mt2','mt3']
+
+layerControl.addBaseLayer(googleSat, 'Satellite Image');
+```
