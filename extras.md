@@ -93,9 +93,27 @@ Put the following code in the `<head>` area of your `index.html` file.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 ```
 ### Part 3: Create style
+```javascript
+// Set style function that sets fill color property
+function style(feature) {
+    return {
+        fillColor: 'blue',
+        fillOpacity: 0.5,
+        weight: 2,
+        opacity: 1,
+        color: '#ffffff',
+        dashArray: '3'
+    };
+}
+    var highlight = {
+        'fillColor': 'yellow',
+        'weight': 2,
+        'opacity': 1
+    };
+```
 
-### Part 3: Javascript
-write a function to parse your geojson file
+### Part 4: Javascript
+write a function to display in popup about the contents of District
 ```javascript
 function forEachFeature(feature, layer) {
 
@@ -111,4 +129,25 @@ function forEachFeature(feature, layer) {
 		layer.setStyle(highlight);  //highlights selected.
 	});
 }	
+```
+### Part 5: Adding Data to the Layer
+```javascript
+// Null variable that will hold layer
+var theLayer = L.geoJson(null, {onEachFeature: forEachFeature, style: style});
+
+$.getJSON(url, function(data) {
+	theLayer.addData(data);
+});
+
+theLayer.addTo(map);
+```
+### Part 6: create a layer control that allows to switch the overlay maps ((in this case, the district boundary layer).
+```javascript
+var overlayMaps = {
+    "District Boundary":theLayer
+};
+```
+### Part 7: Adding the Layer Control to the Map: 
+```javascript
+var layerControl = L.control.layers(baseLayers, overlayMaps).addTo(map);
 ```
