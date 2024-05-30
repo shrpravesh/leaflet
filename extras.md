@@ -39,7 +39,7 @@ var baseLayers = {
 var layerControl = L.control.layers(baseLayers).addTo(map);
 ```
 
-Add google satellite image on the above.
+Add google images on the above.
 
 Satellite:
 
