@@ -76,3 +76,39 @@ googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
 
 layerControl.addBaseLayer(googleTerrain, 'Terrain');
 ```
+
+Geojson file in Leaflet
+Lets add District of Nepal in your current workspace, that reads from a GeoJSON file using JQuery.
+
+<img src="images/jquery.png">
+
+### Part 1: Copy Nepal.json file in the same directory as your index file.
+
+### Part 2: Using Jquery.
+We can read the Geojson file using the jQuery library  using the followign script.
+
+Put the following code in the `<head>` area of your `index.html` file.
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+```
+### Part 3: Create style
+
+### Part 3: Javascript
+write a function to parse your geojson file
+```javascript
+function forEachFeature(feature, layer) {
+
+	var popupContent = "<p><b>DISTRICT: </b>"+ feature.properties.ADM2NM_1 +
+		"</br>DISTRICT CODE: "+ feature.properties.ADM2CD +
+		"</br>PROVINCE: "+ feature.properties.ADM1NM +
+		"</br>PROVINCE CODE: "+ feature.properties.ADM1CD +'</p>';
+
+	layer.bindPopup(popupContent);
+
+	layer.on("click", function (e) {
+		theLayer.setStyle(style); //resets layer colors
+		layer.setStyle(highlight);  //highlights selected.
+	});
+}	
+```
