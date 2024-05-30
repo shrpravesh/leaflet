@@ -13,7 +13,7 @@ map.on('click', onMapClick);
 
 ### layercontrols.
 This will show you how to group several layers into one, and how to use the layers control to allow users to easily switch different layers on your map.
-
+<img src="images/Layer Controls.png">
 ```javascript
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
